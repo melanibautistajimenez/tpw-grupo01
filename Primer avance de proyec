@@ -58,6 +58,53 @@
                 <li>Esmaltes y productos de alta calidad y larga duración.</li>
             </ul>
         </section>
+ <!-- MELANI BAUTISTA: SERVICIOS -->
+        <section id="servicios">
+            <h2>Nuestros Servicios</h2>
+            <p>Ofrecemos una amplia variedad de tratamientos y acabados para el cuidado de tus uñas:</p>
+            
+            <ul>
+                <li><strong>Manicure Rusa / Tradicional:</strong> Limpieza profunda, hidratación y esmaltado.</li>
+                <li><strong>Pedicure Completo:</strong> Exfoliación, tratamiento de cutículas y acabado perfecto.</li>
+                <li><strong>Uñas Acrílicas:</strong> Extensión y esculpido resistente con el largo de tu preferencia.</li>
+                <li><strong>Uñas en Gel / Soft Gel:</strong> Acabado natural, ligero y de larga duración.</li>
+                <li><strong>Nail Art Personalizado:</strong> Diseños a mano alzada, pedrería, mano de vaca, efectos y más.</li>
+                <li><strong>Retiro de Uñas:</strong> Remoción segura sin dañar tu uña natural.</li>
+            </ul>
+
+            <h3>Tabla de Tarifas</h3>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Servicio</th>
+                        <th>Descripción</th>
+                        <th>Precio Aprox.</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Manicure Gelish</td>
+                        <td>Esmaltado semipermanente de larga duración</td>
+                        <td>S/ 45.00</td>
+                    </tr>
+                    <tr>
+                        <td>Uñas Acrílicas (Set Completo)</td>
+                        <td>Esculpido + esmaltado en gel + diseño básico</td>
+                        <td>S/ 90.00</td>
+                    </tr>
+                    <tr>
+                        <td>Pedicure SPA</td>
+                        <td>Exfoliación, mascarilla e hidratación profunda</td>
+                        <td>S/ 60.00</td>
+                    </tr>
+                    <tr>
+                        <td>Nail Art (por uña)</td>
+                        <td>Efectos, cristales o mano alzada detallada</td>
+                        <td>Desde S/ 5.00</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
     </main>
 
     <hr>
