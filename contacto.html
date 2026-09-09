@@ -1,75 +1,69 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Reservas</title>
-  </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finas Nails - Contacto y Reservas</title>
+</head>
+<body>
 
-  <body>
-    <header></header>
+    <header>
+        <h1>💖 Finas Nails</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="galeria.html">Galería</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <main>
-      <section class="contact-info">
-        <fieldset>
-          <legend>Contactanos</legend>
-          <h2>Hablemos</h2>
-          <p>
-            ¿Tienes una idea para tu próximo diseño de uñas? Escríbenos y
-            cuéntanos qué tienes en mente. Estaremos encantados de ayudarte.
-          </p>
-          <h3>Email</h3>
-          <a href="mailto:finasnails@gmail.com" class="email">
-            finasnails@gmail.com
-          </a>
-          <h3>Redes Sociales</h3>
-          <div class="social-links">
-            <a href="#">Instagram</a>
-            <a href="#">Twitter</a>
-            <a href="#">Facebook</a>
-          </div>
-          <h3>Reserva por WhatsApp</h3>
-          <a href="#" class="whatsapp-btn">WhatsApp</a>
-        </fieldset>
-      </section>
+        <section class="contact-info">
+            <fieldset>
+                <legend>Contáctanos</legend>
+                <h2>Hablemos</h2>
+                <p>¿Tienes una idea para tu próximo diseño de uñas? Escríbenos y cuéntanos qué tienes en mente.</p>
+                <h3>Email</h3>
+                <a href="mailto:finasnails@gmail.com">finasnails@gmail.com</a>
+            </fieldset>
+        </section>
 
-      <section class="booking-form">
-        <fieldset>
-          <legend>Reserva tu cita</legend>
-          <form action="procesar.php" method="get">
-            <label for="nombre">Nombre</label>
-            <input type="text" id="nombre" name="nombre" />
+        <section class="booking-form">
+            <fieldset>
+                <legend>Reserva tu cita</legend>
+                <form action="#" method="post">
+                    <label for="nombre">Nombre completo:</label>
+                    <input type="text" id="nombre" name="nombre" required />
 
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" />
+                    <label for="email">Correo electrónico:</label>
+                    <input type="email" id="email" name="email" required />
 
-            <label for="sede">Selecciona la sede</label>
-            <select id="sede" name="sede">
-              <option value="">Seleccionar sede</option>
-              <option value="lima">Lima</option>
-              <option value="miraflores">Miraflores</option>
-            </select>
+                    <label for="sede">Selecciona la sede:</label>
+                    <select id="sede" name="sede" required>
+                        <option value="">Seleccionar sede</option>
+                        <option value="lima">Lima</option>
+                        <option value="miraflores">Miraflores</option>
+                    </select>
 
-            <label for="servicio">Servicio a realizar</label>
-            <select id="servicio" name="servicio">
-              <option value="">Seleccionar servicio</option>
-              <option value="soft pink gel nails">Soft Pink Gel Nails</option>
-              <option value="aries nails">Aries Nails</option>
-            </select>
+                    <label for="servicio">Servicio a realizar:</label>
+                    <select id="servicio" name="servicio" required>
+                        <option value="">Seleccionar servicio</option>
+                        <option value="gelish">Manicure Gelish</option>
+                        <option value="acrilicas">Uñas Acrílicas</option>
+                    </select>
 
-            <label for="hora">Horarios disponibles</label>
-            <select id="hora" name="hora">
-              <option value="">Seleccionar horario</option>
-              <option value="10:00">10:00 AM</option>
-              <option value="12:00">12:00 PM</option>
-              <option value="15:00">3:00 PM</option>
-              <option value="17:00">5:00 PM</option>
-            </select>
-            <button type="submit">Reservar</button>
-          </form>
-        </fieldset>
-      </section>
+                    <button type="submit">Reservar Cita</button>
+                </form>
+            </fieldset>
+        </section>
     </main>
-    <link rel="stylesheet" href="/style.css" />
-  </body>
+
+    <footer>
+        <p>&copy; 2026 Finas Nails - Todos los derechos reservados.</p>
+    </footer>
+
+</body>
 </html>
