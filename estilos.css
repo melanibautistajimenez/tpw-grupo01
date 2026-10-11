@@ -1,0 +1,210 @@
+/* Fuente, fondo y color del texto de toda la página */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fff7f8;
+    color: #513e43;
+    line-height: 1.6;
+}
+
+/* Encabezado y nombre del negocio */
+header {
+    padding: 25px 15px 20px;
+    background-color: #f5d4da;
+    text-align: center;
+    border-bottom: 3px solid #d69aa8;
+}
+
+h1 {
+    margin: 0;
+    font-family: Georgia, serif;
+    font-size: 40px;
+    color: #863c55;
+}
+
+header p {
+    margin: 5px 0 20px;
+}
+
+/* Flex coloca los enlaces del menú uno al lado del otro */
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav a {
+    display: block;
+    padding: 7px 18px;
+    border-radius: 5px;
+    color: #71364b;
+    text-decoration: none;
+}
+
+nav a:hover,
+nav a.activo {
+    background-color: #fff7f8;
+}
+
+/* Contenido centrado, con espacio a los lados */
+main {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+section {
+    margin-bottom: 25px;
+    padding: 25px;
+    background-color: white;
+    border: 1px solid #ebc9d1;
+    border-radius: 10px;
+}
+
+h2,
+h3,
+h4 {
+    margin-top: 0;
+    color: #863c55;
+}
+
+h2 {
+    margin-bottom: 5px;
+    font-size: 30px;
+}
+
+h3 {
+    font-size: 23px;
+}
+
+/* Presentación y logo */
+#inicio {
+    text-align: center;
+}
+
+.subtitulo {
+    margin-top: 0;
+    color: #79515e;
+    font-weight: bold;
+}
+
+figure {
+    margin: 25px 0;
+}
+
+figure img {
+    width: 350px;
+    max-width: 100%;
+    height: auto;
+    border: 3px solid #f5d4da;
+    border-radius: 10px;
+}
+
+figcaption {
+    margin-top: 10px;
+    font-size: 14px;
+    font-style: italic;
+}
+
+/* Enlace con apariencia de botón */
+.boton {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #9b4563;
+    border-radius: 6px;
+    color: white;
+    text-decoration: none;
+}
+
+.boton:hover {
+    background-color: #7e344f;
+}
+
+a:focus-visible {
+    outline: 3px solid #71364b;
+    outline-offset: 3px;
+}
+
+/* Lista de beneficios */
+#beneficios {
+    background-color: #fcebef;
+}
+
+#beneficios ul {
+    margin-bottom: 0;
+    padding-left: 22px;
+}
+
+#beneficios li {
+    margin-bottom: 10px;
+}
+
+/* Videos: pasan a otra fila cuando falta espacio */
+#videos-demostracion {
+    text-align: center;
+}
+
+.lista-videos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+.lista-videos article {
+    width: 300px;
+    max-width: 100%;
+}
+
+iframe {
+    display: block;
+    width: 100%;
+    height: 480px;
+    border: 0;
+    border-radius: 6px;
+    background-color: #fcebef;
+}
+
+/* Pie de página */
+footer {
+    padding: 20px 15px;
+    background-color: #f5d4da;
+    text-align: center;
+    font-size: 14px;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+/* Ajustes sencillos para pantallas pequeñas */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 34px;
+    }
+
+    h2 {
+        font-size: 26px;
+    }
+
+    main {
+        padding: 0 12px;
+        margin-top: 20px;
+    }
+
+    section {
+        padding: 20px 15px;
+    }
+
+    nav a {
+        padding: 7px 12px;
+    }
+}
