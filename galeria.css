@@ -1,6 +1,4 @@
- /* ==========================================================================
-   1. ARQUITECTURA CSS & VARIABLES DE DISEÑO (:root)
-   ========================================================================== */
+
 :root {
   --color-primary: #c48b9f;
   --color-primary-dark: #a65b75;
@@ -13,9 +11,7 @@
   --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
-/* ==========================================================================
-   2. ESTILOS GLOBALES & RESET
-   ========================================================================== */
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -26,50 +22,10 @@ body {
   background-color: var(--color-bg);
   color: var(--color-text);
   line-height: 1.6;
-  overflow-x: hidden; /* Evita desbordamiento horizontal (scroll-x) */
+  overflow-x: hidden; 
 }
 
-/* ==========================================================================
-   3. CABECERA & NAVEGACIÓN (Flexbox)
-   ========================================================================== */
-header {
-  background-color: var(--color-card-bg);
-  border-bottom: 1px solid var(--border-color);
-  padding: 20px;
-  text-align: center;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
-}
-header h1 {
-  font-size: 2rem;
-  color: var(--color-primary);
-  margin-bottom: 15px;
-  letter-spacing: 1px;
-}
-nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 15px;
-}
-nav a {
-  text-decoration: none;
-  color: var(--color-text-muted);
-  font-weight: 600;
-  font-size: 0.95rem;
-  padding: 8px 16px;
-  border-radius: 20px;
-  transition: var(--transition-smooth);
-}
-nav a:hover,
-nav a:focus {
-  background-color: var(--color-secondary);
-  color: var(--color-primary-dark);
-  outline: none;
-}
-/* ==========================================================================
-   4. ESTRUCTURA PRINCIPAL & PRESENTACIÓN
-   ========================================================================== */
+
 main {
   max-width: 1200px;
   margin: 0 auto;
@@ -91,9 +47,7 @@ main {
   font-size: 1.1rem;
   color: var(--color-text-muted);
 }
-/* ==========================================================================
-   5. CATÁLOGO DE DISEÑOS (CSS Grid )
-   ========================================================================== */
+
 #fotos-portafolio {
   margin-bottom: 60px;
 }
@@ -105,13 +59,13 @@ main {
   text-align: center;
   position: relative;
 }
-/* Aplicación de CSS Grid para el catálogo */
+
 .galeria-tarjetas {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
   gap: 30px;
 }
-/* Estilo de Tarjetas con Acabado UI y Microinteracciones */
+
 #fotos-portafolio article {
   background-color: var(--color-card-bg);
   border-radius: 12px;
@@ -155,9 +109,7 @@ main {
   color: var(--color-text-muted);
   line-height: 1.5;
 }
-/* ==========================================================================
-   6. SECCIÓN DE DEMOSTRACIONES (Flexbox adaptativo para videos)
-   ========================================================================== */
+
 #videos-demostración {
   display: grid;
   grid-template-columns: 1fr;
@@ -186,7 +138,7 @@ main {
   color: var(--color-primary-dark);
   margin-bottom: 15px;
 }
-/* Contenedor responsivo para los iframes de YouTube */
+
 #videos-demostración iframe {
   display: block;
   width: 100%;
@@ -203,9 +155,7 @@ main {
   font-weight: 600;
   color: var(--color-text-muted);
 }
-/* ==========================================================================
-   7. PIE DE PÁGINA (Footer)
-   ========================================================================== */
+
 footer {
   text-align: center;
   padding: 30px;
@@ -214,9 +164,7 @@ footer {
   font-size: 0.9rem;
   margin-top: 60px;
 }
-/* ==========================================================================
-   8. DISEÑO ADAPTATIVO (Responsive Design - Media Queries)
-   ========================================================================== */
+
 @media (min-width: 600px) {
   .galeria-tarjetas {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -233,9 +181,6 @@ footer {
   }
 }
 @media (max-width: 480px) {
-  header h1 {
-    font-size: 1.6rem;
-  }
   #presentacion-galeria h2 {
     font-size: 1.8rem;
   }

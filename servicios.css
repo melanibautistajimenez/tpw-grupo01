@@ -1,0 +1,256 @@
+/* Colores rosados y fondo claro, como en la galería. */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #faf7f8;
+    color: #333333;
+    line-height: 1.6;
+}
+
+/* Nombre del salón y menú de navegación. */
+header {
+    padding: 20px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #f0e6e8;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0 0 15px;
+    color: #c48b9f;
+    font-size: 32px;
+    letter-spacing: 1px;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav a {
+    display: block;
+    padding: 8px 16px;
+    border-radius: 20px;
+    color: #666666;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+nav a:hover,
+nav a.activo {
+    background-color: #fcedf2;
+    color: #a65b75;
+}
+
+/* Presentación y contenido centrado. */
+main {
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+h2 {
+    margin: 0 0 12px;
+    color: #a65b75;
+    font-size: 28px;
+}
+
+#servicios > h2 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 35px;
+    letter-spacing: 1px;
+}
+
+#servicios > p {
+    max-width: 680px;
+    margin: 0 auto 35px;
+    color: #666666;
+    text-align: center;
+    font-size: 17px;
+}
+
+/* Grid organiza las seis tarjetas en tres columnas. */
+.lista-servicios {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.tarjeta {
+    padding: 26px;
+    border: 1px solid #f0e6e8;
+    border-radius: 12px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+}
+
+.tarjeta:hover {
+    border-color: #c48b9f;
+}
+
+.numero {
+    display: inline-block;
+    padding: 7px 12px;
+    border-radius: 10px;
+    background-color: #fcedf2;
+    color: #a65b75;
+    font-weight: bold;
+}
+
+.tarjeta h3 {
+    margin: 16px 0 10px;
+    font-size: 20px;
+}
+
+.tarjeta p {
+    margin: 0;
+    color: #666666;
+}
+
+/* Tabla con los precios originales del proyecto. */
+#tarifas {
+    margin-top: 50px;
+    padding: 28px;
+    border: 1px solid #f0e6e8;
+    border-radius: 12px;
+    background-color: #ffffff;
+}
+
+.tabla-contenedor {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    min-width: 540px;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+caption {
+    padding: 0 0 18px;
+    color: #666666;
+    text-align: left;
+}
+
+th,
+td {
+    padding: 16px;
+    border-bottom: 1px solid #f0e6e8;
+}
+
+th {
+    background-color: #fcedf2;
+    color: #a65b75;
+}
+
+td:last-child {
+    color: #a65b75;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.nota {
+    margin: 18px 0 0;
+    color: #666666;
+    font-size: 14px;
+}
+
+/* Invitación a reservar una cita. */
+#reserva {
+    margin-top: 35px;
+    padding: 35px 20px;
+    border-radius: 12px;
+    background-color: #fcedf2;
+    text-align: center;
+}
+
+#reserva p {
+    margin: 0 0 22px;
+    color: #666666;
+}
+
+.boton {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 8px;
+    background-color: #a65b75;
+    color: #ffffff;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.boton:hover {
+    background-color: #89465e;
+}
+
+.enlace-galeria {
+    display: block;
+    width: fit-content;
+    margin: 15px auto 0;
+    color: #89465e;
+}
+
+a:focus-visible,
+.tabla-contenedor:focus-visible {
+    outline: 3px solid #89465e;
+    outline-offset: 4px;
+}
+
+footer {
+    margin-top: 30px;
+    padding: 30px 20px;
+    background-color: #2c2c2c;
+    color: #ffffff;
+    text-align: center;
+    font-size: 14px;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Dos columnas en tablets y una en celulares. */
+@media (max-width: 900px) {
+    .lista-servicios {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    main {
+        padding: 30px 15px;
+    }
+
+    nav ul {
+        gap: 5px;
+    }
+
+    nav a {
+        padding: 8px 12px;
+    }
+
+    #servicios > h2 {
+        font-size: 28px;
+    }
+
+    .lista-servicios {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 18px;
+    }
+
+    #tarifas {
+        padding: 20px 15px;
+    }
+}

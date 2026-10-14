@@ -1,78 +1,112 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Finas Nails - Contacto y Reservas</title>
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Finas Nails - Contacto y Reservas</title>
+        <link rel="stylesheet" href="contacto.css">
+        <link rel="stylesheet" href="cabecera.css?v=2">
+        <script src="contacto.js" defer></script>
+    </head>
+    <body>
 
-    <header>
-        <h1>Finas Nails</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="servicios.html">Servicios</a></li>
-                <li><a href="galeria.html">Galería</a></li>
-                <li><a href="nosotros.html">Nosotros</a></li>
-                <li><a href="contacto.html">Contacto y Reservas</a></li>
-            </ul>
-        </nav>
-    </header>
+        <header>
+            <h1>Finas Nails</h1>
+            <p>Studio de Belleza y Arte en Uñas</p>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="servicios.html">Servicios</a></li>
+                    <li><a href="galeria.html">Galería</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="contacto.html" class="activo" aria-current="page">Contacto y Reservas</a></li>
+                </ul>
+            </nav>
+        </header>
 
-    <main>
-        <section class="contact-info">
-            <fieldset>
-                <legend>Contáctanos</legend>
-                <h2>¡Hablemos!</h2>
-                <p>¿Tienes una idea para tu próximo diseño de uñas? Escríbenos y cuéntanos qué tienes en mente.</p>
-                <h3>Email:</h3>
-                <p><a href="mailto:finasnails1@gmail.com">finasnails1@gmail.com</a></p>
-            </fieldset>
-        </section>
+        <main>
+            <section class="presentacion">
+                <h2>Contacto y Reservas</h2>
+                <p>Cuéntanos qué tienes en mente. Te ayudamos a elegir el servicio ideal para tus uñas.</p>
+            </section>
 
-        <section class="booking-form">
-            <form action="#" method="post">
-                <fieldset>
-                    <legend>Reserva tu cita</legend>
-                    
-                    <p>
-                        <label for="nombre">Nombre completo:</label>
-                        <input type="text" id="nombre" name="nombre" required>
-                    </p>
-                    
-                    <p>
-                        <label for="email">Correo electrónico:</label>
-                        <input type="email" id="email" name="email" required>
-                    </p>
+            <div class="contenido-contacto">
+                <section class="contact-info">
+                    <span class="etiqueta">ESTAMOS PARA AYUDARTE</span>
+                    <h3>¡Hablemos!</h3>
+                    <p>¿Tienes una idea para tu próximo diseño de uñas? Escríbenos y cuéntanos qué tienes en mente.</p>
+                    <div class="correo-contacto">
+                        <h4>Correo electrónico</h4>
+                        <a href="mailto:finasnails1@gmail.com">finasnails1@gmail.com</a>
+                    </div>
+                    <div class="pasos">
+                        <h4>¿Cómo solicitar tu cita?</h4>
+                        <ol>
+                            <li>Completa tus datos y elige un servicio.</li>
+                            <li>Prepara tu solicitud y envíala desde tu correo.</li>
+                            <li>Espera nuestra respuesta para coordinar y confirmar tu cita.</li>
+                        </ol>
+                    </div>
+                    <a href="galeria.html" class="enlace-galeria">Inspírate con nuestra galería</a>
+                </section>
 
-                    <p>
-                        <label for="sede">Selecciona la sede:</label>
-                        <select id="sede" name="sede" required>
-                            <option value="">Seleccionar sede</option>
-                            <option value="Lima">Lima</option>
-                            <option value="Miraflores">Miraflores</option>
-                        </select>
-                    </p>
+                <section class="booking-form">
+                    <form id="formulario-reserva">
+                        <fieldset>
+                            <legend>Solicita tu cita</legend>
+                            <p class="introduccion-formulario">Completa los campos obligatorios marcados con *.</p>
 
-                    <p>
-                        <label for="servicio">Servicio a realizar:</label>
-                        <select id="servicio" name="servicio" required>
-                            <option value="">Seleccionar servicio</option>
-                            <option value="gelish">Manicure Gelish</option>
-                            <option value="acrilicas">Uñas Acrílicas</option>
-                        </select>
-                    </p>
+                            <div class="campos">
+                                <div class="campo">
+                                    <label for="nombre">Nombre completo *</label>
+                                    <input type="text" id="nombre" name="nombre" autocomplete="name" maxlength="100" placeholder="Escribe tu nombre" required>
+                                </div>
+                                <div class="campo">
+                                    <label for="email">Correo electrónico *</label>
+                                    <input type="email" id="email" name="email" autocomplete="email" maxlength="150" placeholder="nombre@correo.com" required>
+                                </div>
+                                <div class="campo">
+                                    <label for="sede">Sede de tu preferencia *</label>
+                                    <select id="sede" name="sede" required>
+                                        <option value="">Seleccionar sede</option>
+                                        <option value="Lima">Lima</option>
+                                        <option value="Miraflores">Miraflores</option>
+                                    </select>
+                                </div>
+                                <div class="campo">
+                                    <label for="servicio">Servicio que deseas *</label>
+                                    <select id="servicio" name="servicio" required>
+                                        <option value="">Seleccionar servicio</option>
+                                        <option value="gelish">Manicure Gelish</option>
+                                        <option value="manicure">Manicure Rusa / Tradicional</option>
+                                        <option value="acrilicas">Uñas Acrílicas</option>
+                                        <option value="pedicure">Pedicure Completo / SPA</option>
+                                        <option value="gel">Uñas en Gel / Soft Gel</option>
+                                        <option value="nail-art">Nail Art Personalizado</option>
+                                        <option value="retiro">Retiro de Uñas</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="campo mensaje">
+                                <label for="mensaje">Cuéntanos tu idea <span>(opcional)</span></label>
+                                <textarea id="mensaje" name="mensaje" rows="4" maxlength="1000" placeholder="Puedes indicar tu diseño favorito o qué día te gustaría visitarnos."></textarea>
+                            </div>
+                            <p class="nota">Prepararemos un correo con tus datos. Tu cita quedará confirmada cuando recibas nuestra respuesta.</p>
+                            <button type="submit">Preparar solicitud</button>
+                            <div id="resultado" class="resultado" role="status" hidden>
+                                <p>Tu solicitud está lista. Abre tu aplicación de correo, revisa los datos y envíala para que podamos coordinar tu cita.</p>
+                                <a id="enlace-correo" class="boton-correo">Abrir mi correo para enviar</a>
+                            </div>
+                            <noscript><p>Para solicitar tu cita, escríbenos a <a href="mailto:finasnails1@gmail.com">finasnails1@gmail.com</a> e indica tu nombre, sede y servicio.</p></noscript>
+                        </fieldset>
+                    </form>
+                </section>
+            </div>
+        </main>
 
-                    <button type="submit">Reservar Cita</button>
-                </fieldset>
-            </form>
-        </section>
-    </main>
+        <footer>
+            <p>&copy; 2026 Finas Nails - Todos los derechos reservados.</p>
+        </footer>
 
-    <footer>
-        <p>&copy; 2026 Finas Nails - Todos los derechos reservados.</p>
-    </footer>
-
-</body>
+    </body>
 </html>

@@ -1,0 +1,79 @@
+/* El mismo encabezado de Inicio para todas las páginas. */
+html {
+    overflow-y: scroll;
+}
+
+body {
+    margin: 0;
+}
+
+header {
+    box-sizing: border-box;
+    padding: 25px 15px 20px;
+    background-color: #f5d4da;
+    border-bottom: 3px solid #d69aa8;
+    box-shadow: none;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    text-align: center;
+}
+
+header * {
+    box-sizing: border-box;
+}
+
+header h1 {
+    margin: 0;
+    font-family: Georgia, serif;
+    font-size: 40px;
+    font-weight: bold;
+    letter-spacing: normal;
+    color: #863c55;
+}
+
+header p {
+    margin: 5px 0 20px;
+    font-size: 16px;
+    color: #513e43;
+}
+
+header nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+header nav a {
+    display: block;
+    padding: 7px 18px;
+    border-radius: 5px;
+    color: #71364b;
+    font-size: 16px;
+    font-weight: normal;
+    text-decoration: none;
+}
+
+header nav a:hover,
+header nav a.activo {
+    background-color: #fff7f8;
+    color: #71364b;
+}
+
+header nav a:focus-visible {
+    outline: 3px solid #71364b;
+    outline-offset: 3px;
+}
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 34px;
+    }
+
+    header nav a {
+        padding: 7px 12px;
+    }
+}

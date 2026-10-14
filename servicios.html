@@ -4,51 +4,76 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Finas Nails - Servicios</title>
+    <link rel="stylesheet" href="servicios.css">
+    <link rel="stylesheet" href="cabecera.css?v=2">
 </head>
 <body>
 
     <header>
         <h1>Finas Nails</h1>
-        <p><em>Especialistas en belleza y cuidado personal</em></p>
-        <hr>
+        <p>Studio de Belleza y Arte en Uñas</p>
         <nav>
             <ul>
                 <li><a href="index.html">Inicio</a></li>
-                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="servicios.html" class="activo" aria-current="page">Servicios</a></li>
                 <li><a href="galeria.html">Galería</a></li>
                 <li><a href="nosotros.html">Nosotros</a></li>
                 <li><a href="contacto.html">Contacto y Reservas</a></li>
             </ul>
         </nav>
     </header>
-    <hr>
 
     <main>
         <section id="servicios">
             <h2>Nuestros Servicios</h2>
             <p>Ofrecemos una amplia variedad de tratamientos y acabados para el cuidado de tus uñas:</p>
-            
-            <ul>
-                <li><strong>Manicure Rusa / Tradicional:</strong> Limpieza profunda, hidratación y esmaltado.</li>
-                <li><strong>Pedicure Completo:</strong> Exfoliación, tratamiento de cutículas y acabado perfecto.</li>
-                <li><strong>Uñas Acrílicas:</strong> Extensión y esculpido resistente con el largo de tu preferencia.</li>
-                <li><strong>Uñas en Gel / Soft Gel:</strong> Acabado natural, ligero y de larga duración.</li>
-                <li><strong>Nail Art Personalizado:</strong> Diseños a mano alzada, pedrería, mano de vaca, efectos y más.</li>
-                <li><strong>Retiro de Uñas:</strong> Remoción segura sin dañar tu uña natural.</li>
-            </ul>
+
+            <!-- Cada tarjeta presenta un servicio del salón. -->
+            <div class="lista-servicios">
+                <article class="tarjeta">
+                    <span class="numero" aria-hidden="true">01</span>
+                    <h3>Manicure Rusa / Tradicional</h3>
+                    <p>Limpieza profunda, hidratación y esmaltado para unas manos cuidadas.</p>
+                </article>
+                <article class="tarjeta">
+                    <span class="numero" aria-hidden="true">02</span>
+                    <h3>Pedicure Completo</h3>
+                    <p>Exfoliación, tratamiento de cutículas y un acabado perfecto para tus pies.</p>
+                </article>
+                <article class="tarjeta">
+                    <span class="numero" aria-hidden="true">03</span>
+                    <h3>Uñas Acrílicas</h3>
+                    <p>Extensión y esculpido resistente con el largo y la forma de tu preferencia.</p>
+                </article>
+                <article class="tarjeta">
+                    <span class="numero" aria-hidden="true">04</span>
+                    <h3>Uñas en Gel / Soft Gel</h3>
+                    <p>Un acabado natural, ligero y de larga duración para complementar tu estilo.</p>
+                </article>
+                <article class="tarjeta">
+                    <span class="numero" aria-hidden="true">05</span>
+                    <h3>Nail Art Personalizado</h3>
+                    <p>Diseños a mano alzada, pedrería, estampado de vaca, efectos y más.</p>
+                </article>
+                <article class="tarjeta">
+                    <span class="numero" aria-hidden="true">06</span>
+                    <h3>Retiro de Uñas</h3>
+                    <p>Remoción cuidadosa para proteger y cuidar tu uña natural.</p>
+                </article>
+            </div>
         </section>
 
-        <hr>
-
         <section id="tarifas">
-            <h3>Tabla de Tarifas</h3>
-            <table border="1" cellpadding="8" cellspacing="0">
-                <caption><em>Precios estimados por servicio</em></caption>
+            <h2>Tabla de Tarifas</h2>
+            <!-- En pantallas pequeñas, la tabla se puede deslizar a los lados. -->
+            <div class="tabla-contenedor" tabindex="0" role="region" aria-label="Tarifas de servicios">
+            <table>
+                <caption>Precios estimados por servicio</caption>
                 <thead>
                     <tr>
-                        <th>Servicio</th>
-                        <th>Descripción</th>
-                        <th>Precio Aprox.</th>
+                        <th scope="col">Servicio</th>
+                        <th scope="col">Descripción</th>
+                        <th scope="col">Precio aprox.</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -69,10 +94,18 @@
                     </tr>
                 </tbody>
             </table>
+            </div>
+            <p class="nota">Los precios son aproximados. Consulta el costo de tu diseño al reservar.</p>
+        </section>
+
+        <section id="reserva">
+            <h2>Elige tu próximo diseño</h2>
+            <p>Estamos listas para darle a tus uñas el cuidado y el estilo que buscas.</p>
+            <a href="contacto.html" class="boton">Reserva tu cita</a>
+            <a href="galeria.html" class="enlace-galeria">Ver diseños en la galería</a>
         </section>
     </main>
 
-    <hr>
 
     <footer>
         <p>&copy; 2026 Finas Nails - Todos los derechos reservados.</p>
