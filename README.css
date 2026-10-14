@@ -1,5 +1,4 @@
-.css{
-    /* ==========================================================================
+ /* ==========================================================================
    1. ARQUITECTURA CSS & VARIABLES DE DISEÑO (:root)
    ========================================================================== */
 :root {
@@ -107,9 +106,9 @@ main {
   position: relative;
 }
 /* Aplicación de CSS Grid para el catálogo */
-#fotos-portafolio {
+.galeria-tarjetas {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: minmax(0, 1fr);
   gap: 30px;
 }
 /* Estilo de Tarjetas con Acabado UI y Microinteracciones */
@@ -129,6 +128,7 @@ main {
 }
 #fotos-portafolio h4 {
   padding: 20px 20px 0 20px;
+  min-height: calc(3.2em + 20px);
   font-size: 1.2rem;
   color: var(--color-text);
 }
@@ -188,9 +188,12 @@ main {
 }
 /* Contenedor responsivo para los iframes de YouTube */
 #videos-demostración iframe {
+  display: block;
   width: 100%;
   max-width: 320px;
-  height: 569px; /* Proporción ideal para Shorts / Reels */
+  height: auto;
+  aspect-ratio: 9 / 16;
+  margin: 0 auto;
   border-radius: 10px;
   border: none;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -214,6 +217,16 @@ footer {
 /* ==========================================================================
    8. DISEÑO ADAPTATIVO (Responsive Design - Media Queries)
    ========================================================================== */
+@media (min-width: 600px) {
+  .galeria-tarjetas {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (min-width: 1100px) {
+  .galeria-tarjetas {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
 @media (min-width: 768px) {
   #videos-demostración {
     grid-template-columns: repeat(2, 1fr);
@@ -234,4 +247,4 @@ footer {
   }
 }
 
-}
+
