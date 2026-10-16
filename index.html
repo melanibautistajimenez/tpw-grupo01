@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Finas Nails - Studio de Belleza</title>
-    <!-- Los estilos de la página están en este archivo -->
-    <link rel="stylesheet" href="estilos.css">
-    <link rel="stylesheet" href="cabecera.css?v=2">
+    <!-- Variables compartidas, estilos de Inicio y encabezado común. -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/cabecera.css?v=2">
 </head>
 <body>
 
@@ -19,10 +20,10 @@
         <nav>
             <ul>
                 <li><a href="index.html" class="activo" aria-current="page">Inicio</a></li>
-                <li><a href="servicios.html">Servicios</a></li>
-                <li><a href="galeria.html">Galería</a></li>
-                <li><a href="nosotros.html">Nosotros</a></li>
-                <li><a href="contacto.html">Contacto y Reservas</a></li>
+                <li><a href="pages/servicios.html">Servicios</a></li>
+                <li><a href="pages/galeria.html">Galería</a></li>
+                <li><a href="pages/nosotros.html">Nosotros</a></li>
+                <li><a href="pages/contacto.html">Contacto y Reservas</a></li>
             </ul>
         </nav>
     </header>
@@ -36,12 +37,12 @@
 
             <!-- Logo de Finas Nails desde tu carpeta local -->
             <figure>
-                <img src="logo.jpg" alt="Logo de Finas Nails Studio" width="350">
+                <img src="assets/img/logo.jpg" alt="Logo de Finas Nails Studio" width="350">
                 <figcaption>Diseños exclusivos para resaltar tu elegancia diaria.</figcaption>
             </figure>
 
             <!-- Un enlace puede verse como un botón usando CSS -->
-            <a href="contacto.html" class="boton">¡Reserva tu cita aquí!</a>
+            <a href="pages/contacto.html" class="boton">¡Reserva tu cita aquí!</a>
         </section>
 
         <section id="beneficios">

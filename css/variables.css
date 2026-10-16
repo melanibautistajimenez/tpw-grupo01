@@ -1,0 +1,45 @@
+/* Valores compartidos del diseño actual. Cargar antes de las demás hojas. */
+:root {
+    /* Paleta de las páginas internas; se conservan los nombres de Galería. */
+    --color-primary: #c48b9f;
+    --color-primary-dark: #a65b75;
+    --color-secondary: #fcedf2;
+    --color-bg: #faf7f8;
+    --color-card-bg: #ffffff;
+    --color-text: #333333;
+    --color-text-muted: #666666;
+    --border-color: #f0e6e8;
+    --color-accent-strong: #89465e;
+    --color-border-accent: #e7c6d2;
+    --color-text-light: #ffffff;
+    --color-footer-bg: #2c2c2c;
+
+    /* Identidad y encabezado compartido. */
+    --color-brand-deep: #863c55;
+    --color-text-warm: #513e43;
+    --color-header-bg: #f5d4da;
+    --color-header-border: #d69aa8;
+    --color-nav-text: #71364b;
+    --color-nav-active-bg: #fff7f8;
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --font-family-header: Arial, sans-serif;
+    --font-family-heading: Georgia, serif;
+
+    /* Espaciado compartido por función, sin alterar unidades ni medidas. */
+    --space-page-x: 20px;
+    --space-page-y: 40px;
+    --space-page-mobile-x: 15px;
+    --space-page-mobile-y: 30px;
+    --space-card-gap: 24px;
+    --space-card-padding: 26px;
+    --space-button-y: 12px;
+    --space-button-x: 24px;
+    --space-nav-gap: 10px;
+
+    --radius-card: 12px;
+    --radius-control: 8px;
+    --radius-medium: 10px;
+    --radius-nav: 5px;
+    --shadow-card: 0 4px 15px rgba(0, 0, 0, 0.04);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
