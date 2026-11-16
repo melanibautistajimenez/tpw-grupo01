@@ -103,6 +103,20 @@
                     </form>
                 </section>
             </div>
+
+            <!-- NUEVA SECCIÓN PARA MOSTRAR LAS CITAS GUARDADAS CON LOCALSTORAGE -->
+            <section class="historial-citas" aria-labelledby="titulo-historial">
+                <div class="historial-cabecera">
+                    <h2 id="titulo-historial">Mis solicitudes guardadas</h2>
+                    <button type="button" id="btn-limpiar-historial" class="btn-secundario" hidden>
+                        Limpiar historial
+                    </button>
+                </div>
+                <p id="mensaje-vacio" class="texto-ayuda">
+                    Aún no tienes solicitudes registradas en este navegador.
+                </p>
+                <div id="lista-solicitudes" class="grid-solicitudes"></div>
+            </section>
         </main>
 
         <footer>
