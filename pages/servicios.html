@@ -4,16 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Finas Nails - Servicios</title>
-    <link rel="stylesheet" href="../css/variables.css">
-    <link rel="stylesheet" href="../css/servicios.css">
-    <link rel="stylesheet" href="../css/cabecera.css?v=2">
+    <link rel="stylesheet" href="../css/variables.css?v=4">
+    <link rel="stylesheet" href="../css/servicios.css?v=4">
+    <link rel="stylesheet" href="../css/cabecera.css?v=4">
+    <script src="../js/menu.js?v=4" defer></script>
 </head>
 <body>
 
     <header>
         <h1>Finas Nails</h1>
         <p>Studio de Belleza y Arte en Uñas</p>
-        <nav>
+        <button type="button" class="menu-boton" aria-controls="menu-principal" aria-expanded="false" hidden>
+            <span aria-hidden="true" class="menu-icono"></span>
+            Menú
+        </button>
+        <nav id="menu-principal" aria-label="Principal">
             <ul>
                 <li><a href="../index.html">Inicio</a></li>
                 <li><a href="servicios.html" class="activo" aria-current="page">Servicios</a></li>
@@ -66,7 +71,6 @@
 
         <section id="tarifas">
             <h2>Tabla de Tarifas</h2>
-            <!-- En pantallas pequeñas, la tabla se puede deslizar a los lados. -->
             <div class="tabla-contenedor" tabindex="0" role="region" aria-label="Tarifas de servicios">
             <table>
                 <caption>Precios estimados por servicio</caption>

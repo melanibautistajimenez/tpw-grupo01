@@ -7,7 +7,7 @@ Incluye Inicio, Servicios y tarifas, Galería, Nosotros y Contacto y Reservas.
 
 - HTML5 para el contenido y la navegación.
 - CSS3 con variables compartidas, Flexbox, Grid y consultas de medios para el diseño responsive.
-- JavaScript sin frameworks para preparar las solicitudes de cita por correo.
+- JavaScript sin frameworks para desplegar el menú en celulares, preparar solicitudes de cita por correo y gestionar un historial local.
 
 Es un sitio estático: no utiliza PHP, backend, base de datos, gestor de paquetes ni proceso de compilación.
 
@@ -27,7 +27,8 @@ tpw-grupo01/
 │   ├── nosotros.css
 │   └── contacto.css
 ├── js/
-│   └── contacto.js
+│   ├── contacto.js
+│   └── menu.js
 ├── pages/
 │   ├── servicios.html
 │   ├── galeria.html
@@ -55,6 +56,12 @@ su disponibilidad depende de la conexión y del proveedor externo. El logo sí e
 El formulario valida los campos y genera un enlace `mailto:` con los datos de la solicitud.
 El visitante abre su aplicación de correo, revisa y envía el mensaje. El sitio no envía correos
 automáticamente ni registra reservas: la cita se confirma al recibir la respuesta del salón.
+
+Al preparar una solicitud también se añade al historial de este navegador mediante `localStorage`.
+Puedes eliminar registros individuales o limpiar el historial completo. Los datos no se sincronizan
+entre dispositivos ni se envían al salón hasta que envíes el correo. Si el almacenamiento está
+bloqueado o el historial está dañado, se muestra un aviso y puedes seguir preparando el correo.
+El formulario exige un nombre de al menos tres caracteres, correo, sede y servicio.
 
 ## Variables CSS
 
@@ -98,8 +105,15 @@ La sintaxis del script puede comprobarse con Node.js, si está instalado:
 
 ```sh
 node --check js/contacto.js
+node --check js/menu.js
 ```
 
 Al revisar cambios, recorre las cinco páginas en escritorio y móvil, comprueba enlaces,
 recursos y consola, y prepara una solicitud de prueba sin abrir ni enviar el correo.
+Comprueba también que el historial persista al recargar, permita eliminar registros y limpiar
+la lista, y que un fallo del almacenamiento no impida preparar la solicitud.
+El menú es desplegable hasta 640 px y horizontal en resoluciones mayores.
+La tipografía parte de una base de 18 px con la configuración habitual del navegador;
+el texto general, la navegación y los campos usan `rem` para respetar las preferencias
+de tamaño del visitante. Los datos secundarios del historial rondan los 16–17 px.
 Al modificar variables compartidas, revisa también los estados de navegación y de los botones.

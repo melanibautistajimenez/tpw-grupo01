@@ -1,10 +1,13 @@
 /* El mismo encabezado de Inicio para todas las páginas. */
 html {
     overflow-y: scroll;
+    /* Base de 18 px con la configuración habitual del navegador. */
+    font-size: 112.5%;
 }
 
 body {
     margin: 0;
+    font-size: 1rem;
 }
 
 header {
@@ -25,7 +28,7 @@ header * {
 header h1 {
     margin: 0;
     font-family: var(--font-family-heading);
-    font-size: 40px;
+    font-size: 2.5rem;
     font-weight: bold;
     letter-spacing: normal;
     color: var(--color-brand-deep);
@@ -33,7 +36,7 @@ header h1 {
 
 header p {
     margin: 5px 0 20px;
-    font-size: 16px;
+    font-size: 1rem;
     color: var(--color-text-warm);
 }
 
@@ -49,10 +52,11 @@ header nav ul {
 
 header nav a {
     display: block;
-    padding: 7px 18px;
+    min-height: 44px;
+    padding: 9px 18px;
     border-radius: var(--radius-nav);
     color: var(--color-nav-text);
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: normal;
     text-decoration: none;
 }
@@ -63,17 +67,82 @@ header nav a.activo {
     color: var(--color-nav-text);
 }
 
-header nav a:focus-visible {
+.menu-boton {
+    display: none;
+}
+
+header nav a:focus-visible,
+header .menu-boton:focus-visible {
     outline: 3px solid var(--color-nav-text);
     outline-offset: 3px;
 }
 
-@media (max-width: 600px) {
-    header h1 {
-        font-size: 34px;
+@media (max-width: 900px) {
+    header nav ul {
+        gap: 4px;
     }
 
     header nav a {
-        padding: 7px 12px;
+        padding-inline: 10px;
+    }
+}
+
+@media (max-width: 640px) {
+    header {
+        padding: 16px 15px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        margin-bottom: 12px;
+    }
+
+    header .menu-boton:not([hidden]) {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        width: auto;
+        min-height: 44px;
+        padding: 8px 16px;
+        border: 1px solid var(--color-header-border);
+        border-radius: var(--radius-control);
+        background-color: var(--color-nav-active-bg);
+        color: var(--color-nav-text);
+        font: inherit;
+        font-weight: 600;
+        cursor: pointer;
+    }
+
+    .menu-icono {
+        position: relative;
+        width: 1.1em;
+        height: 0.8em;
+        border-block: 2px solid currentColor;
+    }
+
+    .menu-icono::before {
+        position: absolute;
+        inset: calc(50% - 1px) 0 auto;
+        border-top: 2px solid currentColor;
+        content: "";
+    }
+
+    .menu-boton:not([hidden])[aria-expanded="false"] + nav {
+        display: none;
+    }
+
+    header nav ul {
+        display: grid;
+        gap: 4px;
+        max-width: 26rem;
+        margin: 8px auto 0;
+    }
+
+    header nav a {
+        padding-inline: 14px;
     }
 }

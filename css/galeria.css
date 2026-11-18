@@ -8,7 +8,6 @@ body {
   background-color: var(--color-bg);
   color: var(--color-text);
   line-height: 1.6;
-  overflow-x: hidden; 
 }
 
 
@@ -91,7 +90,7 @@ main {
   transform: scale(1.03);
 }
 #fotos-portafolio figcaption {
-  font-size: 0.95rem;
+  font-size: 1rem;
   color: var(--color-text-muted);
   line-height: 1.5;
 }
@@ -147,7 +146,7 @@ footer {
   padding: 30px;
   background-color: var(--color-footer-bg);
   color: var(--color-text-light);
-  font-size: 0.9rem;
+  font-size: 1rem;
   margin-top: 60px;
 }
 
@@ -175,6 +174,9 @@ footer {
   }
   #videos-demostración {
     padding: 20px 10px;
+  }
+  #videos-demostración article {
+    padding: 16px;
   }
 }
 
